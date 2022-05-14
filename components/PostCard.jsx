@@ -8,7 +8,8 @@ const PostCard = ({post}) => {
   return (
     <div className="bg-white shadow-lg rounded-lg p-0 pb-12 mb-8 lg:p-8">
       <div className="relative shadow-lg overflow-hidden mb-6 ">
-        <img src={post.featuredImage.url} alt={post.title} className="object-top h-full w-full rounded-t-lg p-2" />
+        <Image  unoptimized src={post.featuredImage.url} alt={post.title} className="object-top rounded-t-lg p-2" width="899px" height="450px"
+        />
       </div>
       <h1 className="text-center mb-8 cursor-pointer hover:text-pink-600 text-3xl font-semibold">
           <Link href={`/post/${post.slug}`}>
@@ -17,7 +18,7 @@ const PostCard = ({post}) => {
       </h1>
       <div className="block lg:flex text-center items-center justify-center mb-8 w-full">
       <div className="flex items-center justify-center mb-4 lg:mb-0 w-full lg:w-auto mr-8 ">
-        <img src={post.author.photo.url} alt={post.author.name} height="30px" width="30px" className='align-middle rounded-full ' />
+        <Image  unoptimized src={post.author.photo.url} alt={post.author.name} height="30px" width="30px" className='align-middle rounded-full ' />
         <p className="inline align-middle text-gray-700 ml-2 font-medium text-lg">{post.author.name}</p>
       </div>
       <div className="font-medium text-gray-700">

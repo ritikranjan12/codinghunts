@@ -1,5 +1,6 @@
 import React from 'react'
 import moment from 'moment'; 
+import Image from 'next/image'
 
 const PostDetail = ({post}) => {
   const getContentFragment = (index, text, obj, type) => {
@@ -28,7 +29,8 @@ const PostDetail = ({post}) => {
         return <h4 key={index} className="text-md font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h4>;
       case 'image':
         return (
-          <img
+          <Image 
+            unoptimized
             key={index}
             alt={obj.title}
             height={obj.height}
@@ -46,12 +48,12 @@ const PostDetail = ({post}) => {
     <>
     <div className='bg-white lg:p-8 lg:pb-12 mb-8 pb-4'>
       <div className="relative shadow-lg overflow-hidden mb-6">
-        <img src={post.featuredImage.url} alt={post.title} className="object-top h-44 lg:h-full w-full rounded-t-lg" />
+        <Image  unoptimized src={post.featuredImage.url} alt={post.title} height="450px" width="899px"  className="lg:w-full ml-2 object-top lg:h-full rounded-t-lg" />
       </div>
       <div className="px-4 lg:px-0">
         <div className="flex  mb-8 w-full">
         <div className="flex mb-4 lg:mb-0 w-full lg:w-auto mr-8 ">
-        <img src={post.author.photo.url} alt={post.author.name} height="30px" width="30px" className='align-middle rounded-full ' />
+        <Image  unoptimized src={post.author.photo.url} alt={post.author.name} height="30px" width="30px" className='align-middle rounded-full ' />
         <p className="inline align-middle text-gray-700 ml-2 font-medium text-lg">{post.author.name}</p>
       </div>
       <div className="font-medium text-gray-700">

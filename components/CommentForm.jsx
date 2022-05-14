@@ -10,7 +10,7 @@ const CommentForm = ({ slug }) => {
        Give Feedback
        </div>
        <div className="flex items-center justify-center mt-4">
-       <Image src="/email.png" alt="email" width={50} height={50} />
+       <Image  unoptimized src="/email.png" alt="email" width={50} height={50} />
        </div>
        <div className='flex items-center justify-center mt-2'>
        <Link href="mailto:ritikranjan539@gmail.com" className='p-text'>ritikranjan539@gmail.com</Link>
