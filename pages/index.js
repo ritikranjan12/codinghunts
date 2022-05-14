@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Script from 'next/script'
 import {PostCard, PostWidget,Categories} from '../components'
 import {getPosts} from '../services'
 import { FeaturedPosts } from '../sections';
