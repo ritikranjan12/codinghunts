@@ -7,7 +7,6 @@ import {
   Author,
   CommentForm,
   PostWidget,
-  Categories,
   Loader,
 } from '../../components'
 import { getPosts, getPostDetails } from '../../services'
@@ -30,61 +29,20 @@ const PostDetails = ({ post }) => {
           content="blog, coding, blog, codechef, solution, leetcode, solution, coder hunts, blogs, coding ,nextjs ,coding help, coder hunts courses, coding environment, coder hunts challenges"
         ></meta>
         <link rel="shortcut icon" href="./favicon.png" />
+        <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4947463072730532"
+     crossorigin="anonymous"></Script>
       </Head>
       <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
         <div className="col-span-2 lg:col-span-8">
-          <Script
-            strategy='lazyOnload'
-            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4947463072730532"
-            crossorigin="anonymous"
-          ></Script>
-
-          <ins
-            className="adsbygoogle"
-            style={{display:"block"}}
-            data-ad-client="ca-pub-4947463072730532"
-            data-ad-slot="5859689937"
-            data-ad-format="auto"
-            data-full-width-responsive="true"
-          ></ins>
-          <Script>(adsbygoogle = window.adsbygoogle || []).push({});</Script>
-
+        <Script strategy='lazyOnload' async="async" data-cfasync="false" src="//wagerprocuratorantiterrorist.com/d6b3eb680ce789507636c0c55c67f116/invoke.js"></Script>
+<div id="container-d6b3eb680ce789507636c0c55c67f116"></div>
           <PostDetail post={post} />
-          <Script
-            strategy='lazyOnload'
-            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4947463072730532"
-            crossorigin="anonymous"
-          ></Script>
-
-          <ins
-            className="adsbygoogle"
-            style={{display:"block"}}
-            data-ad-client="ca-pub-4947463072730532"
-            data-ad-slot="5859689937"
-            data-ad-format="auto"
-            data-full-width-responsive="true"
-          ></ins>
-          <Script>(adsbygoogle = window.adsbygoogle || []).push({});</Script>
+          <Script strategy='lazyOnload' type='text/javascript' src='//wagerprocuratorantiterrorist.com/7b/87/23/7b8723d915acabc220d733146e63588b.js'></Script>
           <Author author={post.author} />
-          <Script
-            strategy='lazyOnload'
-            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4947463072730532"
-            crossorigin="anonymous"
-          ></Script>
-
-          <ins
-            className="adsbygoogle"
-            style={{display:"block"}}
-            data-ad-client="ca-pub-4947463072730532"
-            data-ad-slot="5859689937"
-            data-ad-format="auto"
-            data-full-width-responsive="true"
-          ></ins>
-          <Script>(adsbygoogle = window.adsbygoogle || []).push({});</Script>
           <CommentForm />
         </div>
         <div className="col-span-1 lg:col-span-4">
-          <div className="relative top-8 lg:sticky">
+          <div className="relative top-8 lg:sticky ml-8 lg:mx-0">
             <PostWidget
               slug={post.slug}
               categories={post.categories.map((category) => category.slug)}
