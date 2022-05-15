@@ -37,8 +37,9 @@ const PostDetails = ({ post }) => {
         <Script strategy='lazyOnload' async="async" data-cfasync="false" src="//wagerprocuratorantiterrorist.com/d6b3eb680ce789507636c0c55c67f116/invoke.js"></Script>
 <div id="container-d6b3eb680ce789507636c0c55c67f116"></div>
           <PostDetail post={post} />
-          <Script strategy='lazyOnload' type='text/javascript' src='//wagerprocuratorantiterrorist.com/7b/87/23/7b8723d915acabc220d733146e63588b.js'></Script>
           <Author author={post.author} />
+          <Script strategy='lazyOnload' async="async" data-cfasync="false" src="//wagerprocuratorantiterrorist.com/d6b3eb680ce789507636c0c55c67f116/invoke.js"></Script>
+<div id="container-d6b3eb680ce789507636c0c55c67f116"></div>
           <CommentForm />
         </div>
         <div className="col-span-1 lg:col-span-4">
