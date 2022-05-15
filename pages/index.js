@@ -8,7 +8,7 @@ export default function Home({posts}) {
   return (  
     <div className="container mx-auto px-10 mb-8 ">
       <Head>
-        <title>Coding Hunts</title>
+        <title>Coding Hunts - Programmer to help you</title>
         <meta name="description" content="A blog website to help students code better day by day" />
         <meta name="keywords" content="blog, coding blog, codechef solution, leetcode solution, coder hunts, blogs, coding, nextjs, coding help, coder hunts courses, coding environment, coder hunts challenges"></meta> 
         <link rel="shortcut icon" href="./favicon.png" />

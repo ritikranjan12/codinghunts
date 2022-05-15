@@ -18,7 +18,7 @@ const PostDetails = ({ post }) => {
   return (
     <div className="container mx-auto mb-8 px-10">
       <Head>
-        <title>{post.slug}</title>
+        <title>Coder Hunts - {post.slug}</title>
         <meta name="description" content="A blog website to help students code better day by day" />
         <meta name="keywords" content="blog, coding, blog, codechef, solution, leetcode, solution, coder hunts, blogs, coding ,nextjs ,coding help, coder hunts courses, coding environment, coder hunts challenges"></meta>
         <link rel="shortcut icon" href="./favicon.png" />
