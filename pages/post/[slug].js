@@ -6,20 +6,19 @@ import {
   Author,
   CommentForm,
   PostWidget,
-  Categories
+  Categories, Loader
 } from '../../components'
 import { getPosts, getPostDetails } from '../../services'
 
 const PostDetails = ({ post }) => {
   const router = useRouter()
-  
   if (router.isFallback) {
-    router.push("/")
+    return <Loader />;
   }
   return (
     <div className="container mx-auto mb-8 px-10">
       <Head>
-        <title>Coder Hunts - Posts</title>
+        <title>{post.slug}</title>
         <meta name="description" content="A blog website to help students code better day by day" />
         <meta name="keywords" content="blog, coding, blog, codechef, solution, leetcode, solution, coder hunts, blogs, coding ,nextjs ,coding help, coder hunts courses, coding environment, coder hunts challenges"></meta>
         <link rel="shortcut icon" href="./favicon.png" />
@@ -54,9 +53,8 @@ export async function getStaticProps({ params }) {
 // The HTML is generated at build time and will be reused on each request.
 export async function getStaticPaths() {
     const posts = await getPosts();
-
     return {
-      paths: posts.map(({ node: { slug } }) => ({ params: { slug }  })),
+      paths: posts.map(({ node: { slug } }) => ({ params: { slug } })),
       fallback: true,
     };
   }
