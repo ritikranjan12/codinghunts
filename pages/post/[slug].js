@@ -1,38 +1,94 @@
 import React from 'react'
 import Head from 'next/head'
+import Script from 'next/script'
 import { useRouter } from 'next/router'
 import {
   PostDetail,
   Author,
   CommentForm,
   PostWidget,
-  Categories, Loader
+  Categories,
+  Loader,
 } from '../../components'
 import { getPosts, getPostDetails } from '../../services'
 
 const PostDetails = ({ post }) => {
   const router = useRouter()
   if (router.isFallback) {
-    return <Loader />;
+    return <Loader />
   }
   return (
     <div className="container mx-auto mb-8 lg:px-10">
       <Head>
         <title>Coder Hunts - {post.slug}</title>
-        <meta name="description" content="A blog website to help students code better day by day" />
-        <meta name="keywords" content="blog, coding, blog, codechef, solution, leetcode, solution, coder hunts, blogs, coding ,nextjs ,coding help, coder hunts courses, coding environment, coder hunts challenges"></meta>
+        <meta
+          name="description"
+          content="A blog website to help students code better day by day"
+        />
+        <meta
+          name="keywords"
+          content="blog, coding, blog, codechef, solution, leetcode, solution, coder hunts, blogs, coding ,nextjs ,coding help, coder hunts courses, coding environment, coder hunts challenges"
+        ></meta>
         <link rel="shortcut icon" href="./favicon.png" />
-    </Head>
+      </Head>
       <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
         <div className="col-span-2 lg:col-span-8">
+          <Script
+            strategy='lazyOnload'
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4947463072730532"
+            crossorigin="anonymous"
+          ></Script>
+
+          <ins
+            className="adsbygoogle"
+            style={{display:"block"}}
+            data-ad-client="ca-pub-4947463072730532"
+            data-ad-slot="5859689937"
+            data-ad-format="auto"
+            data-full-width-responsive="true"
+          ></ins>
+          <Script>(adsbygoogle = window.adsbygoogle || []).push({});</Script>
+
           <PostDetail post={post} />
+          <Script
+            strategy='lazyOnload'
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4947463072730532"
+            crossorigin="anonymous"
+          ></Script>
+
+          <ins
+            className="adsbygoogle"
+            style={{display:"block"}}
+            data-ad-client="ca-pub-4947463072730532"
+            data-ad-slot="5859689937"
+            data-ad-format="auto"
+            data-full-width-responsive="true"
+          ></ins>
+          <Script>(adsbygoogle = window.adsbygoogle || []).push({});</Script>
           <Author author={post.author} />
+          <Script
+            strategy='lazyOnload'
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4947463072730532"
+            crossorigin="anonymous"
+          ></Script>
+
+          <ins
+            className="adsbygoogle"
+            style={{display:"block"}}
+            data-ad-client="ca-pub-4947463072730532"
+            data-ad-slot="5859689937"
+            data-ad-format="auto"
+            data-full-width-responsive="true"
+          ></ins>
+          <Script>(adsbygoogle = window.adsbygoogle || []).push({});</Script>
           <CommentForm />
         </div>
         <div className="col-span-1 lg:col-span-4">
           <div className="relative top-8 lg:sticky">
-            <PostWidget slug={post.slug} categories={post.categories.map(category => category.slug)} />
-  
+            <PostWidget
+              slug={post.slug}
+              categories={post.categories.map((category) => category.slug)}
+            />
           </div>
         </div>
       </div>
@@ -52,9 +108,9 @@ export async function getStaticProps({ params }) {
 // Specify dynamic routes to pre-render pages based on data.
 // The HTML is generated at build time and will be reused on each request.
 export async function getStaticPaths() {
-    const posts = await getPosts();
-    return {
-      paths: posts.map(({ node: { slug } }) => ({ params: { slug } })),
-      fallback: true,
-    };
+  const posts = await getPosts()
+  return {
+    paths: posts.map(({ node: { slug } }) => ({ params: { slug } })),
+    fallback: true,
   }
+}
