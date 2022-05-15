@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Script from 'next/Script'
+import Script from 'next/script'
 import {PostCard, PostWidget,Categories} from '../components'
 import {getPosts} from '../services'
 import { FeaturedPosts } from '../sections';
@@ -10,10 +10,10 @@ export default function Home({posts}) {
       <Head>
         <title>Coding Hunts</title>
         <meta name="description" content="A blog website to help students code better day by day" />
-        <meta name="keywords" content="blog, coding blog, codechef solution, leetcode solution, coder hunts, blogs, coding, nextjs, coding help, coder hunts courses, coding environment, coder hunts challenges"></meta>
-        <link rel="shortcut icon" type="image/png" href="./favicon.png" />
-        <Script strategy='lazyOnload' src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4947463072730532"
-     crossorigin="anonymous"></Script>   
+        <meta name="keywords" content="blog, coding blog, codechef solution, leetcode solution, coder hunts, blogs, coding, nextjs, coding help, coder hunts courses, coding environment, coder hunts challenges"></meta> 
+        <link rel="shortcut icon" href="./favicon.png" />
+     <Script strategy='lazyOnload' src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4947463072730532"
+     crossorigin="anonymous"></Script>        
     </Head>
     <FeaturedPosts />
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
