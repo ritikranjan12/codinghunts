@@ -13,15 +13,7 @@ export default function Home({posts}) {
         <meta name="keywords" content="blog, coding blog, codechef solution, leetcode solution, coder hunts, blogs, coding, nextjs, coding help, coder hunts courses, coding environment, coder hunts challenges"></meta>
         <link rel="shortcut icon" href="./favicon.png" />
      <Script strategy='lazyOnload' src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4947463072730532"
-     crossorigin="anonymous"></Script>
-        <Script strategy='lazyOnload' src="https://www.googletagmanager.com/gtag/js?id=G-FFBNJDSM29"></Script>
-        <Script >
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments)}
-              gtag('js', new Date());
-
-              gtag('config', 'G-FFBNJDSM29');
-        </Script>
+     crossorigin="anonymous"></Script>        
     </Head>
     <FeaturedPosts />
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
