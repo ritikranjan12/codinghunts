@@ -21,6 +21,10 @@ const PostDetail = ({post}) => {
     }
 
     switch (type) {
+      case 'heading-one':
+        return <h1 key={index} className="text-3xl font-bold mb-5">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h1>;
+        case 'heading-two':
+        return <h2 key={index} className="text-2xl font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h2>;
       case 'heading-three':
         return <h3 key={index} className="text-xl font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h3>;
       case 'paragraph':
