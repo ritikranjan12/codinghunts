@@ -16,7 +16,7 @@ const PostDetails = ({ post }) => {
     return <Loader />;
   }
   return (
-    <div className="container mx-auto mb-8 px-10">
+    <div className="container mx-auto mb-8 lg:px-10">
       <Head>
         <title>Coder Hunts - {post.slug}</title>
         <meta name="description" content="A blog website to help students code better day by day" />
@@ -32,7 +32,7 @@ const PostDetails = ({ post }) => {
         <div className="col-span-1 lg:col-span-4">
           <div className="relative top-8 lg:sticky">
             <PostWidget slug={post.slug} categories={post.categories.map(category => category.slug)} />
-            <Categories />
+  
           </div>
         </div>
       </div>

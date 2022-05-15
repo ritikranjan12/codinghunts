@@ -23,8 +23,7 @@ export default function Home({posts}) {
         ))}
         </div>
       <div className="lg:col-span-4 col-span-1"> 
-                <PostWidget/>            
-                <Categories />
+                <PostWidget/>
       </div>
       
       </div>
