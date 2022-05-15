@@ -2,7 +2,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export ",
+    "build": "next build",
+    "sitemap": "next-sitemap --config next-sitemap.config.js",
     "start": "next start"
   },
   "dependencies": {
@@ -20,6 +21,7 @@
     "@types/node": "17.0.4",
     "@types/react": "17.0.38",
     "autoprefixer": "^10.4.0",
+    "next-sitemap": "^2.5.20",
     "postcss": "^8.4.5",
     "prettier": "^2.5.1",
     "prettier-plugin-tailwindcss": "^0.1.1",
