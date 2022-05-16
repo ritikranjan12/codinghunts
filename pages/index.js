@@ -11,9 +11,7 @@ export default function Home({posts}) {
         <title>Coder Hunts - Programmer to help you</title>
         <meta name="description" content="A blog website to help students code better day by day" />
         <meta name="keywords" content="blog, coding blog, codechef solution, leetcode solution, coder hunts, blogs, coding, nextjs, coding help, coder hunts courses, coding environment, coder hunts challenges"></meta> 
-        <link rel="shortcut icon" href="./favicon.png" />
-        <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4947463072730532"
-     crossorigin="anonymous"></Script>      
+        <link rel="shortcut icon" href="./favicon.png" />      
     </Head>
     <FeaturedPosts />
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
