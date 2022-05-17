@@ -1,5 +1,5 @@
 export default function (req, res) {  
-    
+    console.log("Api called")
     let nodemailer = require('nodemailer')
     const transporter = nodemailer.createTransport({
       port: 465,
