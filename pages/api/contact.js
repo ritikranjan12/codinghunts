@@ -18,7 +18,7 @@ export default function (req, res) {
       html: `<div>Feedback Recieved : ${req.body.message}</div><p>From : ${req.body.name}</p><p>Sent from:
       ${req.body.email}</p>`
     }
-    transporter.sendMail(mailData, function (err, info) {
+    await transporter.sendMail(mailData, function (err, info) {
       if(err)
         console.log(err)
       else
