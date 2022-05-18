@@ -1,4 +1,4 @@
-export default function (req, res) {  
+export default function async (req, res)  {  
     console.log("Api called")
     let nodemailer = require('nodemailer')
     const transporter = nodemailer.createTransport({
@@ -18,7 +18,7 @@ export default function (req, res) {
       html: `<div>Feedback Recieved : ${req.body.message}</div><p>From : ${req.body.name}</p><p>Sent from:
       ${req.body.email}</p>`
     }
-    await transporter.sendMail(mailData, function (err, info) {
+    transporter.sendMail(mailData, function (err, info) {
       if(err)
         console.log(err)
       else

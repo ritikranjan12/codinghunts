@@ -25,7 +25,7 @@ const CommentForm = ({ slug }) => {
       email,
       message
     }
-    await fetch('/api/contact', {
+    await fetch('./pages/api/contact', {
       method: 'POST',
       headers: {
         'Accept': 'application/json, text/plain, */*',
