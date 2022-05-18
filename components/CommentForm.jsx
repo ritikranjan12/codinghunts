@@ -18,30 +18,51 @@ const CommentForm = ({ slug }) => {
   }
 
   const handlePostSubmission = async(e) => {
-    
+    const senderEmail = "coderhuntsofficial@gmail.com"
+    const password  = "coderhunts@24042001@"
+    const subject = "FeedBack Recieved"
     console.log("Sending")
-    let data = {
-      name,
+    const data = {
+      senderEmail,
       email,
+      password,
+      subject,
       message
     }
-    await fetch('./pages/api/contact', {
+
+    const options = {
       method: 'POST',
       headers: {
-        'Accept': 'application/json, text/plain, */*',
-        'Content-Type': 'application/json'
+        'content-type': 'application/json',
+        'X-RapidAPI-Host': 'free-email-sender.p.rapidapi.com',
+        'X-RapidAPI-Key': '283ad9f926msh1b52f18764a1427p113d65jsn6372c497a931'
       },
       body: JSON.stringify(data)
-    }).then((res) => {
-      console.log(body);
-      console.log('Response received')
-      if (res.status === 200) {
-        console.log('Response succeeded!')
-        setEmail('')
-        setname('')
-        setMessage('')
-      }
-    })
+      };
+    
+    await fetch('https://free-email-sender.p.rapidapi.com/sendemail?senderEmail=coderhuntsofficial%40gmail.com&password=coderhunts%4024042001%40&email=ritikranjan539%40gmail.com&subject=Hii&message=Hello%20handsome', options)
+      .then(response => response.json())
+      .then(response => console.log(response))
+      .catch(err => console.error(err));
+
+
+    // await fetch('./pages/api/contact', {
+    //   method: 'POST',
+    //   headers: {
+    //     'Accept': 'application/json, text/plain, */*',
+    //     'Content-Type': 'application/json'
+    //   },
+    //   body: JSON.stringify(data)
+    // }).then((res) => {
+    //   console.log(body);
+    //   console.log('Response received')
+    //   if (res.status === 200) {
+    //     console.log('Response succeeded!')
+    //     setEmail('')
+    //     setname('')
+    //     setMessage('')
+    //   }
+    // })
   }
   
   return (
