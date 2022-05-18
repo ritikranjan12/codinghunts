@@ -1,5 +1,5 @@
 import { useState } from 'react';
-
+import { toast } from 'react-toastify';
 const CommentForm = ({ slug }) => {
   const [name,setname] = useState('');
   const [email,setEmail] = useState('');
@@ -19,7 +19,7 @@ const CommentForm = ({ slug }) => {
     const senderEmail = "coderhuntsofficial@gmail.com"
     const password  = "coderhunts@24042001@"
     const subject = "FeedBack Recieved"
-    console.log("Sending")
+    toast.success("FeedBack Send!")
     const data = {
       senderEmail,
       email,
