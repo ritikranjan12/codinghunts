@@ -1,7 +1,5 @@
 import { useState } from 'react';
 
-
-
 const CommentForm = ({ slug }) => {
   const [name,setname] = useState('');
   const [email,setEmail] = useState('');
@@ -41,8 +39,12 @@ const CommentForm = ({ slug }) => {
       };
     
     await fetch('https://free-email-sender.p.rapidapi.com/sendemail?senderEmail=coderhuntsofficial%40gmail.com&password=coderhunts%4024042001%40&email=ritikranjan539%40gmail.com&subject=Hii&message=Hello%20handsome', options)
-      .then(response => response.json())
-      .then(response => console.log(response))
+      .then(response => {
+        console.log(response.json)
+        setname('');
+        setEmail('');
+        setMessage('');
+  })
       .catch(err => console.error(err));
 
 
