@@ -2,6 +2,7 @@ import React from 'react'
 import moment from 'moment'; 
 import Image from 'next/image'
 
+
 const PostDetail = ({post}) => {
   const getContentFragment = (index, text, obj, type) => {
     let modifiedText = text;
@@ -30,7 +31,7 @@ const PostDetail = ({post}) => {
       case 'paragraph':
         return <p key={index} className="mb-8">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</p>;
       case 'heading-six':
-        return <pre key={index} className='bg-gray-900 text-green-500 whitespace-pre-wrap overflow-x-hidden mx-auto'><code className='px-2'>{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</code></pre>
+        return <pre key={index} className='bg-gray-900 text-green-500 whitespace-pre-wrap overflow-x-scroll  mx-auto'><code className='px-2'>{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</code></pre>
       case 'heading-four':
         return <h4 key={index} className="text-md font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h4>;
         case 'heading-five':

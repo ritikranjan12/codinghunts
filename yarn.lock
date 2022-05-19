@@ -351,6 +351,11 @@
   dependencies:
     "function-bind" "^1.1.1"
 
+"highlight.js@^11.5.1":
+  "integrity" "sha512-LKzHqnxr4CrD2YsNoIf/o5nJ09j4yi/GcH5BnYz9UnVpZdS4ucMgvP61TDty5xJcFGRjnH4DpujkS9bHT3hq0Q=="
+  "resolved" "https://registry.npmjs.org/highlight.js/-/highlight.js-11.5.1.tgz"
+  "version" "11.5.1"
+
 "html-dom-parser@1.2.0":
   "integrity" "sha512-2HIpFMvvffsXHFUFjso0M9LqM+1Lm22BF+Df2ba+7QHJXjk63pWChEnI6YG27eaWqUdfnh5/Vy+OXrNTtepRsg=="
   "resolved" "https://registry.npmjs.org/html-dom-parser/-/html-dom-parser-1.2.0.tgz"
