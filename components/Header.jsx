@@ -21,6 +21,13 @@ const Header = () => {
                     </span>
                 </Link>
             </div>
+            <div className="md:float-right block">
+                <Link href="https://www.coderhunts.com">
+                    <span className="cursor-pointer  text-2xl text-white">
+                        Home
+                    </span>
+                </Link>
+            </div>
         </div>
       
     </div>
