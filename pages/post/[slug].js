@@ -9,6 +9,7 @@ import {
   PostWidget,
   Loader,
 } from '../../components'
+
 import { getPosts, getPostDetails } from '../../services'
 
 const PostDetails = ({ post }) => {
@@ -29,15 +30,13 @@ const PostDetails = ({ post }) => {
           content="blog, coding, blog, codechef, solution, leetcode, solution, coder hunts, blogs, coding ,nextjs ,coding help, coder hunts courses, coding environment, coder hunts challenges"
         ></meta>
         <link rel="shortcut icon" href="./favicon.png" />
-        
+ 
       </Head>
       <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
         <div className="col-span-2 lg:col-span-8">
-        
+          
           <PostDetail post={post} />
           <Author author={post.author} />
-          <Script strategy='lazyOnload' async="async" data-cfasync="false" src="//wagerprocuratorantiterrorist.com/d6b3eb680ce789507636c0c55c67f116/invoke.js"></Script>
-<div id="container-d6b3eb680ce789507636c0c55c67f116"></div>
           <CommentForm />
         </div>
         <div className="col-span-1 lg:col-span-4">
